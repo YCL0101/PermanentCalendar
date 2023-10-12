@@ -1,0 +1,87 @@
+/* pages/solarTerm/solarTerm.wxss */
+.solarTermImg {
+	width: 100px;
+	height: 100px;
+}
+.solarTermList {
+	/* border: solid; */
+	padding: 20rpx 20rpx;
+}
+.solarTermItem {
+	border: 1px solid rgb(23, 194, 17);
+	border-radius: 5px;
+	overflow: hidden;
+	width: 100px;
+	float: left;
+	text-align: center;
+	margin-left: 20rpx;
+	margin-top: 20rpx;
+}
+/* 清除浮动 */
+.solarTermList::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+swiper  {
+	height: 1300px;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-around;
+}
+.nav view {
+	/* border: solid; */
+	padding: 5px 10px;
+	
+}
+
+.selectedNav {
+	color: rgb(170, 0, 0);
+	border-bottom: 1px solid;
+}
+
+
+.holiday-item {
+	background-color: rgb(236, 236, 236);
+	width: 700rpx;
+	display: flex;
+	margin: 18px auto;
+	border-radius: 10rpx;
+	/* border: solid; */
+	padding-left: 20rpx;
+	padding-top: 20rpx;
+	padding-bottom: 20rpx;
+	
+}
+.hoilday_name {
+	font-size: 38rpx;
+	font-weight: 500;
+}
+.hoilday_date {
+	/* border: 1px solid; */
+	margin-top: 10rpx;
+}
+.holiday-item > view {
+	flex: 1;
+}
+.h-item-right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.holiday_duration {
+	border: 1px solid;
+	margin-right: 30px;
+	padding: 10rpx 15rpx;
+	background-color: rgb(69, 103, 216);
+	color: rgb(255, 255, 255);
+}
+.whichYear {
+	font-size: 20px;
+	width: 700rpx;
+	margin: 40rpx auto;
+}

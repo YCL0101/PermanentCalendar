@@ -1,0 +1,56 @@
+
+<view>
+  <view class="hade">
+    <!-- 登录后 -->
+    <view wx:if="{{nickName}}">
+      <view class="TouX">
+        <image src="/images/me/user_img/avatar.png" style="  width: 50px;height: 50px;border-radius: 100%;" mode="" />
+      </view>
+      <view class="NiC">
+        <text>{{nickName}}</text>
+      </view>
+    </view>
+    <!-- 未登录 -->
+    <view wx:else="{{nickName}}">
+      <button bindtap="login" style="position: relative; left: 1rpx; top: 80rpx">
+        登录
+      </button>
+
+    </view>
+  </view>
+
+  <view class="end" style="width: 750rpx; height: 374rpx; display: block; box-sizing: border-box">
+    <!-- 个人信息 -->
+    <view bindtap="geRen" class="endT" wx:if="{{nickName}}">
+      <image src="/images/me/me-end/geRen.png" style="width: 40rpx; height: 40rpx; display: block; box-sizing: border-box;margin-left: 5px;margin-right: 5px;" mode="" />
+      <text bindtap="geRen">个人信息</text>
+      <text style="margin-left: auto;margin-right: 5px;">></text>
+    </view>
+    <!-- 添加到我的小程序 -->
+    <view class="endT" bindtap="xianImg">
+      <image class="end_Img" src="/images/me/me-end/SC.png" mode="" />
+      <text>添加到我的小程序</text>
+      <text style="margin-left: auto;margin-right: 5px;">></text>
+    </view>
+    <image class="scImg" src="{{tianjiaimg}}" wx:if="{{scImg}}" bindtap="yinImg" mode="" />
+    <!-- 推荐给好友 -->
+    <view class="endT">
+      <image class="end_Img" src="/images/me/me-end/dianZ.png" mode="" />
+      <text>推荐给好友</text>
+      <button class="end_B" open-type="share"></button>
+      <text style="margin-left: auto;margin-right: 5px;">></text>
+    </view>
+    <!-- 意见反馈 -->
+    <view class="endT">
+      <image class="end_Img" src="/images/me/me-end/yiJ.png" mode="" />
+
+      <text>意见反馈</text>
+      <button class="end_B" open-type="feedback"></button>
+      <text style="margin-left: auto;margin-right: 5px;">></text>
+    </view>
+  </view>
+</view>
+<!-- 遮罩 -->
+<view class="mask" wx:if="{{scImg}}">
+
+</view>

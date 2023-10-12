@@ -1,0 +1,124 @@
+/* components/date-weather/date-weather.wxss */
+.component {
+	box-sizing: border-box;
+	background-color: #fff;
+	margin: 20rpx 20rpx;
+	border-radius: 15rpx;
+	box-shadow: 1px 1px 0px 1px rgb(192, 192, 192);
+}
+.dateWeatherBox {
+	/* border: solid; */
+	display: flex;
+	padding: 20rpx;
+}
+.lunardateDeatil {
+	width: 60%;
+	/* background-color: aquamarine; */
+	/* border: 1px solid; */
+	/* flex: 1; */
+}
+.weatherDetail {
+	width: 40%;
+	/* background-color: rgb(161, 159, 159); */
+	/* border: 1px solid; */
+	
+	/* flex: 1; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:flex-end;
+	font-size: 24rpx;
+}
+.temp {
+	font-size: 60rpx;
+	color: rgb(202, 39, 39);
+	font-weight: 500;
+}
+.weatherDetail view {
+	/* border: 1px solid; */
+}
+.weatherDetail .weather {
+	margin-top: 40rpx;
+	color: rgb(119, 119, 119);
+}
+.windPower {
+	color: rgb(34, 158, 75);
+}
+.suitAvoid {
+	/* display: flex; */
+	margin: 10rpx 0;
+	font-size: 26rpx;
+}
+.suit,
+.avoid {
+	display: flex;
+	/* border: 1px solid; */
+	height: 30px;
+	padding: 5rpx 0;
+	line-height: 30px;
+}
+.lunarTitle {
+	height: 40px;
+	/* border: solid; */
+	display: flex;
+	/* border: 1px solid; */
+}
+.lunarTitle-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 5px;
+	font-size: 40rpx;
+	/* border: 1px solid; */
+}
+.lunarTitle-tip {
+	border: 1px solid;
+	color: rgb(100, 74, 17);
+	font-weight: 500;
+	background-color: rgb(231, 222, 190);
+	text-align: center;
+	height: 28px;
+	padding: 0 2px;
+	margin: auto 0;
+
+	/* padding: 2px; */
+	/* border:1px solid; */
+	writing-mode: vertical-lr;
+	font-size: 20rpx;
+}
+.suit-icon,
+.avoid-icon {
+	width: 24px;
+	height: 24px;
+	border-radius: 12px;
+	color: #ffffff;
+	/* padding: 8rpx; */
+	/* font-size: 12px; */
+	line-height: 24px;
+	text-align: center;
+	margin: auto 0;
+}
+.suit-icon {
+	background-color: rgb(5, 145, 75);
+}
+.avoid-icon {
+	background-color: rgb(221, 94, 94);
+	color: #ffffff;
+}
+
+.suit-content,
+.avoid-content {
+	flex: 1;
+	margin-left: 10rpx;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	/* background-color: rgb(212, 140, 140); */
+	color: rgb(95, 95, 95);
+}
+
+.lunarTitleContent {
+	margin: 10rpx 0;
+	color: rgb(87, 87, 87);
+	font-size: 24rpx;
+}

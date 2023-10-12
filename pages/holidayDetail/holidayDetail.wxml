@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="userinfo">
+	<!--背景图片-->
+	<view class="bg-image">
+		<image mode="scaleToFill" src="https://pic2.zhimg.com/v2-e3831c78ed2e86afce8231132b48d2c1_r.jpg"></image>
+	</view>
+
+
+	<view class="father">
+		<view class="son">
+			<view class="title">简介</view>
+			<view class="son1"> 名称：{{selectedHoliday.name}}</view>
+			<view class="son1"> 日期：{{selectedHoliday.date}}</view>
+			<view class="son1">历史起源：{{selectedHoliday.history}}
+			</view>
+			<view class="son1">
+			民间活动：<text decode="true" wx:for="{{selectedHoliday.folk_activities}}" wx:key="index">{{item}}&nbsp;</text>
+			</view>
+			<view class="son1">
+			传统食俗：<text decode="true" wx:for="{{selectedHoliday.traditional_food}}" wx:key="index">{{item}}&nbsp;</text>
+			</view>
+			<view class="son1"></view>
+		</view>
+		<view class="son">
+			<view class="title">历史起源</view>
+			<view class="son2">{{selectedHoliday.origin.description}}</view>
+		</view>
+		<view class="son">
+			<view class="title">民间活动：</view>
+			<view class="son2">{{selectedHoliday.folk_activities_info.description}}</view>
+		</view>
+		<view class="son">
+			<view class="title">传统食俗：</view>
+			<view class="son2"> {{selectedHoliday.traditional_food_info.description}}</view>
+		</view>
+	</view>
+</view>
+
+<view class="mask"></view>

@@ -1,0 +1,90 @@
+
+
+
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+	background-color: rgb(0, 0, 0,.5);
+	z-index: 3;
+	background-origin: solid;
+	color: #ffffff;
+	margin-top: 100px;
+
+}
+
+.solarTitle {
+  text-align: center;
+	margin-bottom: 20px;
+	z-index: 10;
+}
+
+.solarTermName {
+  font-size: 24px;
+  font-weight: bold;
+  /* color: #ffffff; */
+  margin-bottom: 10px;
+}
+
+.solarTermdate {
+  font-size: 16px;
+  /* color: #ffffff; */
+  margin-bottom: 10px;
+}
+
+.solarTermDescribe {
+  margin-top: 20px;
+	text-align: left;
+	
+}
+.solarTermDescribe > view {
+	padding-left: 20rpx;
+	padding-right: 20rpx;
+}
+
+.solarTermDescribe view {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.solar-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.d_title {
+	color: #e7e7e7;
+}
+.jianjie {
+	padding: 10px 0;
+	font-size: 18px !important;
+	border-bottom: 1px solid;
+}
+.gailan {
+	border-top: 1px solid;
+	text-align: left;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-left: 20rpx;
+	padding-right: 20rpx;
+}

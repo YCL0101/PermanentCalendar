@@ -1,0 +1,21 @@
+<view class="line"></view>
+<view class="perTou">
+  <text class="text">头像</text>
+  <image class="right" src="/images/me/user_img/avatar.png" style="  width: 50px;height: 50px;border-radius: 100%;" mode="" />
+</view>
+<view class="line">
+</view>
+<view class="perTou">
+  <text class="text">昵称</text>
+  <text class="right">{{nickName}}</text>
+</view>
+<view class="line"></view>
+<view class="perTou">
+  <text class="text">手机号码</text>
+  <text class="right">{{phone}}</text>
+</view>
+<view class="line"></view>
+<view class="perTou" bindtap="quit">
+  <text class="text">退出当前账号</text>
+</view>
+<view class="line"></view>

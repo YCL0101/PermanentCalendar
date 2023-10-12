@@ -1,0 +1,88 @@
+var filteDate = function (date) {
+	// console.log(date)
+	if (typeof (date) == 'undefined') return;
+	var dateArr = date.split('-');
+	var result = parseInt(dateArr[dateArr.length - 1])
+	return result
+}
+var isEmelyObj = function (obj) {
+	// 由于wxs不支持Object.keys()和JSON等，使用其他方法伪判断
+	console.log("@isEmelyObj",JSON.stringify(obj) == "{}")
+	return JSON.stringify(obj) == "{}"
+
+}
+var isSelected = function(obj1,obj2) {
+	// console.log("obj1",obj1)
+	// console.log("obj2",obj2)
+	if(JSON.stringify(obj1) == "{}"){
+		// console.log("此时day为空")
+		return "";
+	} 
+	if(typeof(obj2)=="undefined") {
+		return "";
+	} else if(obj1.date == obj2.date) {
+		return "selected"
+	} else {
+		return '';
+	}
+	console.log('obj1和2')
+	return "selected"
+}
+// 取字符串最后两位
+var getLastTwoChars = function(str){
+	if(typeof(str) === "undefined") {
+		return '';
+	}
+	// console.log('@str',str)
+	return str.slice(-2)
+}
+
+/**当前选中suit是否在suits数组存在，如果存在返回类名effect-selectedSuit） */ 
+var isSubString = function(sourceStr,targetStr) {
+	if(typeof(sourceStr)=="undefined") {
+		return ""
+	}
+	var index = sourceStr.search(targetStr)
+	// console.log("index",index)
+	if(index == -1 || targetStr=="") {
+		return false
+	} else {
+		return "effect-selectedSuit"
+	}
+}
+var fil_FestivalOr_solarTerms = function(day){
+	if(day.solarTerms == undefined) {
+		return ''
+	}
+	console.log('过略里的day',day)
+	if(day.solarTerms.search('后') == -1) {
+		return day.solarTerms
+	}else if(day.typeDes=='工作日'||day.typeDes=='休息日') {
+		return getLastTwoChars(day.lunarCalendar)
+	} else {
+		return day.typeDes
+	}
+}
+var is_FestivalOr_solarTerms = function(day){
+	if(day.solarTerms == undefined) {
+		return false
+	}
+
+	if(day.solarTerms.search('后') == -1) {
+		return true
+	}else if(day.typeDes=='工作日'||day.typeDes=='休息日') {
+		return false
+	} else {
+		return true
+	}
+}
+
+module.exports = {
+	filteDate: filteDate,
+	isEmelyObj: isEmelyObj,
+	getLastTwoChars:getLastTwoChars,
+	isSelected:isSelected,
+	isSubString: isSubString,
+	fil_FestivalOr_solarTerms:fil_FestivalOr_solarTerms,
+	is_FestivalOr_solarTerms:is_FestivalOr_solarTerms
+}

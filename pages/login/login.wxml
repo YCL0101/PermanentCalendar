@@ -1,0 +1,16 @@
+<form bindsubmit="login">
+<text class="text1">手机号码</text>
+<view class="dengLuT">
+<input type="number" placeholder="请输入手机号码"  name="phone"></input>
+</view>
+<text class="text1">密码</text>
+<view class="dengLuT">
+<input type="password" placeholder="请输入密码"  name="passWord"></input>
+</view>
+<view class="loadButton">
+<button type="primary" form-type="submit">登录</button>
+</view>
+<view bindtap="register" class="register">
+  注册
+</view>
+</form>

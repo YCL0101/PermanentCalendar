@@ -1,0 +1,78 @@
+<!--components/my-calendar/my-calendar.wxml-->
+
+
+<wxs src='../../filter/formatStr.wxs' module="unit" />
+
+
+
+<view class="component-calendar">
+	<view class="picker">
+		<!-- 市区选择 -->
+		<picker mode="region" value="{{selectedRegion}}" level="province" bindchange="rigionChangeHandle">
+			<view class="picker-region">
+				<image class="icon-location" src="/images/icons/location_fill.png" mode="" />
+				<text>{{selectedRegion[1]}}</text>
+			</view>
+		</picker>
+		<!-- 🚩日期选择器 -->
+		<picker mode="date" header-text="选择时间" fields="month" value="{{currentDate.currentDateToMonth}}" bindchange="dateChangeHandle">
+			<view class="picker-date">
+				<text></text>
+				{{currentDate.currentDateToMonth}}
+			</view>
+		</picker>
+		<!-- 回到今天功能，当为今天时隐藏 -->
+		<view class="goToToday" hidden="{{currentDate.today == currentDate.selectDayObj.date}}" bindtap="goToTodayHandle">今</view>
+		<view class="showSuit" bindtap="showSuit">{{suitTitle}}</view>
+	</view>
+	<scroll-view class="suit-list" hidden="{{isShowSuit}}" scroll-x="true" >
+		<view class="suit-item {{suit==selectedSuitVal?'effect-selectedSuitHead':''}}" wx:for="{{suits}}" wx:key="index" wx:for-item="suit" data-suit="{{suit}}" bindtap="selectSuitHandle">{{suit}}</view>
+	</scroll-view>
+	<!-- 日期表格 -->
+	<view class="table">
+		<!-- 星期 -->
+		<view class="tr">
+			<view class="th">
+				日
+			</view>
+			<view class="th">
+				一
+			</view>
+			<view class="th">
+				二
+			</view>
+			<view class="th">
+				三
+			</view>
+			<view class="th">
+				四
+			</view>
+			<view class="th">
+				五
+			</view>
+			<view class="th">
+				六
+			</view>
+		</view>
+		<!-- 每周 -->
+		<view class="tr" wx:for="{{selectedYearArr[unit.filteDate(currentDate.currentDateToMonth) - 1].weeks}}" hidden="{{ !isUnfold&&(index == currentDate.selectDayObj.atWeekOfMonth ? false: true)}}" wx:for-item="oneWeek" wx:key="index">
+			<!-- 一周的每天 -->
+			<view class="td {{ unit.isSelected(day,currentDate.selectDayObj) }} {{unit.isSubString(day.suit,selectedSuitVal)}}" wx:for="{{oneWeek}}" wx:for-item='day' wx:for-index='idx' wx:key="idx" data-day="{{day}}" bindtap="selectDayHandle">
+				<view class="calendar">
+					<view class="solarCalendar {{day.weekDay >= 6 ? 'dayOff' : ''}}">
+						{{unit.filteDate(day.date)}}
+					</view>
+					<view class="lunarCalendar {{unit.is_FestivalOr_solarTerms(day) ? 'isFestival' : ''}}">
+						<!-- {{unit.getLastTwoChars(day.lunarCalendar)}} -->
+						{{unit.fil_FestivalOr_solarTerms(day)}}
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+	<view class="unfold" bindtap="unfoldHandle">
+		<image class="icon-fold" src="{{icon_foldArr[isUnfold ? 1 : 0]}}" mode="" />
+		<text> {{isUnfold ? "收起" : "展开"}}</text>
+	</view>
+</view>

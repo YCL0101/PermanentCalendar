@@ -1,0 +1,7 @@
+{
+	"usingComponents": {
+        "recent-festival": "/components/recent-festival/recent-festival",
+				"date-weather":"/components/date-weather/date-weather",
+				"my-calendar":"/components/my-calendar/my-calendar"
+	}
+}

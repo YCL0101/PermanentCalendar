@@ -1,0 +1,22 @@
+.text1 {
+  margin: 20rpx;
+}
+
+.dengLuT input {
+  margin: 20rpx;
+  padding-left: 10rpx;
+  height: 80rpx;
+  border: 1rpx solid #c3c3c3;
+}
+
+.loadButton button {
+  margin-top: 50rpx;
+  width: 94% !important;
+}
+.register{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+
+}

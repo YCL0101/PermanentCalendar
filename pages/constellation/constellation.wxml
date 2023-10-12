@@ -1,0 +1,38 @@
+<view class="img">
+  <image src="https://pic.ntimg.cn/file/20190410/27516062_234159031000_2.jpg"></image>
+</view>
+<view class="container">
+  <view class="text">
+    <text>
+      年轻人需要关注亚健康问题，尤其是平时很少运动的朋友，更是容易感受到身体抵抗力在下降，需要落实锻炼计划。
+    </text>
+  </view>
+  <view class="nav">
+    <ul>
+      <li class="{{list==0? 'active':''}}" bindtap="changeList" data-list="0">今日运势</li>
+      <li class="{{list==1? 'active':''}}" bindtap="changeList" data-list="1">明日运势</li>
+      <li class="{{list==2? 'active':''}}" bindtap="changeList" data-list="2">本周运势</li>
+      <li class="{{list==3? 'active':''}}" bindtap="changeList" data-list="3">本月运势</li>
+    </ul>
+  </view>
+  <!--  -->
+
+  <view class="container-bottom">
+    <swiper current="{{list}}" bindchange="change" circular>
+      <block wx:for="{{['','','','']}}" wx:key="index">
+        <swiper-item>
+          <block wx:for="{{daydetail}}" wx:key="index">
+            <view class="item">
+              <view>
+                {{item.tip}}
+              </view>
+              {{item.text}}
+            </view>
+          </block>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!--  -->
+</view>

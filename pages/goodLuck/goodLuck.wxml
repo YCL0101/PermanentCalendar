@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view class="content">
+  <!-- 日期 与分享-->
+  <view class="rifen">
+    <view class="riqi">
+      <picker mode="date" start="1900-01-01" end="2099-01-01" bindchange="bindDateChange" value="{{date}}">
+        <view class="picker">
+          <view>{{date}}</view>
+          <view>
+            <image class="picker-icon" src="/images/goodLuck/jian-xia.png"></image>
+          </view>
+        </view>
+      </picker>
+    </view>
+    <view class="fenxiang">
+      <button open-type="share">
+        <image class="fenxiang-icon" src="/images/goodLuck/fenxiang.png"></image>
+      </button>
+    </view>
+  </view>
+
+  <!-- 阴历日期 -->
+  <view class="yinli">
+    <view class="yinli-riqi">
+      <view bindtap="Datejian">
+        <image class="riqi-jian-icon" src="/images/goodLuck/jian-zuo.png"></image>
+      </view>
+      <view class="yinliri">{{list.result.lubarmonth}}{{list.result.lunarday}}</view>
+      <view bindtap="Datejia">
+        <image class="riqi-jia-icon" src="/images/goodLuck/jian-you.png"></image>
+      </view>
+    </view>
+    <view>{{list.result.tiangandizhiyear}}年 {{list.result.tiangandizhimonth}}月 {{list.result.tiangandizhiday}}日</view>
+  </view>
+  <!-- 宜忌 -->
+  <view class="yiji">
+    <view class="yi">
+      <view class="yi-icon">宜</view>
+      <view>{{list.result.fitness}}</view>
+    </view>
+    <view class="ji">
+      <view class="ji-icon">忌</view>
+      <view>{{list.result.taboo}}</view>
+    </view>
+  </view>
+  <!-- 表格 -->
+  <view class="table">
+    <view class="tr-zhushen">
+      <view class="tr-zhushen-tag">诸神方位</view>
+      <view class="tr-zhushen-content">{{list.result.shenwei}}</view>
+    </view>
+    <view class="tr-taichong">
+      <view class="tr-taishen">
+        <view class="tr-taishen-tag">胎神</view>
+        <view class="tr-taishen-content">{{list.result.taishen}}</view>
+      </view>
+      <view class="tr-chongsha">
+        <view class="tr-chongsha-tag">冲煞</view>
+        <view class="tr-chongsha-content">{{list.result.chongsha}}</view>
+      </view>
+    </view>
+    <view class="tr-wuxiu">
+      <view class="tr-wuxing">
+        <view class="tr-wuxing-tag">五行</view>
+        <view class="tr-wuxing-content">{{list.result.wuxingnamonth}}</view>
+      </view>
+      <view class="tr-xingxiu">
+        <view class="tr-xingxiu-tag">星宿</view>
+        <view class="tr-xingxiu-content">{{list.result.xingsu}}</view>
+      </view>
+    </view>
+    <view class="tr-jisheng">
+      <view class="tr-jijie">
+        <view class="tr-jijie-tag">季节</view>
+        <view class="tr-jijie-content">{{list.result.lmonthname}}</view>
+      </view>
+      <view class="tr-shengxiao">
+        <view class="tr-shengxiao-tag">生肖</view>
+        <view class="tr-shengxiao-content">{{list.result.shengxiao}}</view>
+      </view>
+    </view>
+    <view class="tr-pengzu">
+      <view class="tr-peng" style="width: 624rpx; height: 134rpx; display: flex; box-sizing: border-box; position: relative; left: -2rpx; top: 0rpx">
+        <view class="tr-peng-tag">彭祖百忌</view>
+        <view class="tr-peng-content">{{list.result.pengzu}}</view>
+      </view>
+    </view>
+  </view>
+</view>

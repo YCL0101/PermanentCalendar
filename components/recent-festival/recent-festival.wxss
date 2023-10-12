@@ -1,0 +1,61 @@
+.festivalCome {
+	padding: 10rpx 10rpx;
+	box-sizing: border-box;
+	background-color: #fff;
+	margin: 20rpx 20rpx;
+	border-radius: 15rpx;
+	box-shadow: 1px 1px 0px 1px rgb(192, 192, 192);
+}
+
+.festivalComeHead {
+	padding: 5rpx 10rpx;
+	/* background-color: rgb(216, 167, 167); */
+	display: flex;
+	justify-content: space-between;
+	/* border: 1px solid; */
+	/* border-bottom: 1px solid; */
+}
+
+.festivalComeHead-title {
+	/* border: 1px solid; */
+	font-size: 38rpx;
+	font-weight: 500;
+	
+}
+
+.festivalComeHead-more {
+	/* border: 1px solid; */
+	font-size: 28rpx;
+	color: rgb(88, 88, 88);
+}
+
+.festival-item {
+	/* border: 1px solid; */
+	justify-content:space-between;
+	display: flex;
+	margin-top: 15rpx;
+}
+
+.festival-item-name {
+	font-size: 32rpx;
+}
+.festival-item-date {
+	font-size: 28rpx;
+	color: rgb(80, 80, 80);
+}
+
+
+
+.esidue-daysr {
+	font-size: 34rpx;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.festival-item-left,
+.festival-item-right {
+	/* border: 1px solid; */
+}
+.festival-come-list {
+	padding: 10rpx 30rpx;
+}

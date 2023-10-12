@@ -1,0 +1,25 @@
+
+<!-- 🚩临近节日 -->
+<view class="festivalCome">
+	<view class="festivalComeHead">
+		<view class="festivalComeHead-title"> 节假来临 </view>
+		<view class="festivalComeHead-more" > <navigator url="/pages/solarTerm/solarTerm">查看更多</navigator> </view>
+	</view>
+	<view class="festival-come-list">
+		<view class="festival-item" wx:for="{{newRecentFestival}}" wx:for-item="festival" wx:key="index">
+			<view class="festival-item-left">
+				<view class="festival-item-name">
+					{{festival.holidayName}}
+				</view>
+				<view class="festival-item-date">
+					{{festival.date}}
+				</view>
+			</view>
+			<view class="festival-item-right">
+				<view class="esidue-daysr">
+					{{festival.residueDays}}天
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

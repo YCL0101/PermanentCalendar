@@ -1,0 +1,35 @@
+<!--pages/solarTerm/solarTerm.wxml-->
+<view class="nav">
+	<view bindtap="selectCurrent" data-navid='0' class="{{currentIndex==0 ? 'selectedNav' : ''}}">节气</view>
+	<view bindtap="selectCurrent" data-navid="1" class="{{currentIndex==1 ? 'selectedNav' : ''}}">节假日</view>
+</view>
+
+<swiper current="{{currentIndex}}" bindchange="currentChangeHandle">
+	<swiper-item>
+		<view class="solarTermList">
+			<view class="solarTermItem" bindtap="goSolarDetail" data-selectedSolar="{{item}}" wx:for="{{solarTermObj.solarTermData}}" wx:key="index">
+				<image class="solarTermImg" src="{{item.imgUrl}}" alt="" />
+				<view class="solarTermName">{{item.solarTermName}}</view>
+				<view class="solarTerdate">{{item.solarTermdate}}</view>
+			</view>
+		</view>
+	</swiper-item>
+	<swiper-item>
+		<view class="holiday">
+			<view class="holiday-list">
+				<view class="whichYear">{{holidayData.year}}年</view>
+				<view class="holiday-item" wx:for="{{holidayData.data}}" wx:key="index" bindtap="goHolidayDetail" data-selectedholiday="{{item}}">
+					<!-- 左 -->
+					<view class="h-item-left">
+						<view class="hoilday_name">{{item.name}}</view>
+						<view class="hoilday_date">{{item.date}}</view>
+					</view>
+					<!-- 右 -->
+					<view class="h-item-right">
+						<view class="holiday_duration">{{item.holiday_duration}}假</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</swiper-item>
+</swiper>

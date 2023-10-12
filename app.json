@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/me/me",
+    "pages/constellation/constellation",
+    "pages/goodLuck/goodLuck",
+    "pages/solarTerm/solarTerm",
+    "pages/solarDetail/solarDetail",
+    "pages/holidayDetail/holidayDetail",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/personalin/personalin",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fd5656",
+    "navigationBarTitleText": "万年历",
+    "navigationBarTextStyle":"black"
+	},
+	"tabBar": {
+		"selectedColor": "#c00000",
+		"list": [
+			{
+			"pagePath": "pages/home/home",
+			"text": "首页",
+			"iconPath": "/images/tabBar/home.png",
+			"selectedIconPath": "/images/tabBar/home_fill.png"
+		},
+			{
+			"pagePath": "pages/constellation/constellation",
+			"text": "星座",
+			"iconPath": "/images/star/star3.png",
+			"selectedIconPath": "/images/star/star1.png"
+		},
+		{
+			"pagePath": "pages/me/me",
+			"text": "我的",
+			"iconPath": "/images/tabBar/my.png",
+			"selectedIconPath": "/images/tabBar/my_fill.png"
+		}
+	]
+	},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

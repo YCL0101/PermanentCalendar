@@ -1,0 +1,21 @@
+
+
+
+
+<!-- 🚩日期选择器组件 -->
+<my-calendar  
+currentDate="{{currentDate}}" 
+selectedYearArr="{{selectedYearArr}}" 
+selectedRegion = "{{selectedRegion}}"
+bind:midSetSelectedDay="upSetSelectedDay"
+bind:midSetSelectedMonth="upSetSelectedMonth"
+bind:midSetSelectedRegion="upSetSelectedRegion"
+bind:midSetGoToTody="upSetGoToTody"></my-calendar>
+
+<!-- 🚩选中日期详情展示组件 -->
+<date-weather bindtap="goGoodLuck"currentDate="{{currentDate}}" currentWeather="{{currentWeather}}"></date-weather>
+
+
+<!-- 🚩临近节日组件 -->
+<recent-festival recentFestival="{{recentFestival}}"></recent-festival>
+

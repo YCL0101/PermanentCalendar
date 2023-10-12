@@ -1,0 +1,19 @@
+<!-- 登录注册页面 -->
+
+<form bindsubmit="register">
+<text class="text1">昵称</text>
+<view class="dengLuT">
+<input type="text" placeholder="请输入昵称"  name="nickName"></input>
+</view>
+<text class="text1">手机号码</text>
+<view class="dengLuT">
+<input type="number" placeholder="请输入手机号码"  name="phone"></input>
+</view>
+<text class="text1">密码</text>
+<view class="dengLuT">
+<input type="password" placeholder="请输入6位密码"  name="passWord"></input>
+</view>
+<view class="loadButton">
+<button type="primary" form-type="submit">注册</button>
+</view>
+</form>

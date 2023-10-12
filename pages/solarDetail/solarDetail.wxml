@@ -1,0 +1,17 @@
+<view class="container">
+	<view class="solarTitle">
+		<view class="solarTermName">{{selectedSolarTerm.solarTermName}}</view>
+		<view class="solarTermdate"> {{selectedSolarTerm.solarTermdate}}</view>
+		<view class="solarTermDescribe">
+			<view class="jianjie">简介</view>
+			<view><text class="d_title">节气活动：</text>{{selectedSolarTerm.solarTermDescribe.activity}}</view>
+			<view><text class="d_title">节气习俗：</text>{{selectedSolarTerm.solarTermDescribe.custom}}</view>
+			<view><text class="d_title">节气特点：</text>{{selectedSolarTerm.solarTermDescribe.feature}}</view>
+			<view><text class="d_title">节气食俗：</text>{{selectedSolarTerm.solarTermDescribe.foodCustom}}</view>
+		</view>
+		<view class="gailan">{{selectedSolarTerm.solarTermDescribe.overView}}</view>
+	</view>
+</view>
+
+<image class="solar-mask" src="{{selectedSolarTerm.imgUrl}}" mode="" />
+<view class="mask"></view>

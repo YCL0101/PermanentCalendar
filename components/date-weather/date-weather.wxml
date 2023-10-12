@@ -1,0 +1,51 @@
+<!--components/date-weather/date-weather.wxml-->
+
+<!-- 🚩选中日期详情展示 -->
+<view class="component">
+	<view class="dateWeatherBox">
+		<view class="lunardateDeatil">
+			<view class="lunarTitle">
+			<view class="lunarTitle-tip">农历</view>
+			<view class="lunarTitle-text">	{{currentDate.selectDayObj.lunarCalendar}}</view>
+			
+			</view>
+			<view class="lunarTitleContent">
+				{{currentDate.selectDayObj.yearTips + currentDate.selectDayObj.chineseZodiac + '年' + '  星期' + currentDate.selectDayObj.weekDay}}
+			</view>
+
+			<view class="suitAvoid">
+				<view class="suit">
+					<view class="suit-icon">
+						宜
+					</view> 
+					<view class="suit-content">{{currentDate.selectDayObj.suit}}</view>
+				</view>
+				<view class="avoid">
+				<view class="avoid-icon">
+					忌
+				</view>
+				<view class="avoid-content">	{{currentDate.selectDayObj.avoid}}</view>
+				</view>
+			</view>
+
+		</view>
+		<view class="weatherDetail">
+			<!-- 温度 -->
+			<view class="temp">
+				{{currentWeather.temp}}
+			</view>
+			<!-- 天气 -->
+			<view class="weather">
+				{{currentWeather.weather}}
+			</view>
+			<view class="windPower">
+			  {{currentWeather.windDirection }}
+				<text decode="true">&nbsp;</text>
+				{{currentWeather.windPower}}
+
+			</view>
+		</view>
+	</view>
+	<view class="futureWeather">
+	</view>
+</view>
